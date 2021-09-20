@@ -8,3 +8,6 @@ This will require modifying the `server.js` file and the `website/app.js` file. 
 
 ## Extras
 If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+
+![image](https://user-images.githubusercontent.com/69693889/134064628-c86e6da6-d407-4cc3-abb2-1fde3770b251.png)
+
