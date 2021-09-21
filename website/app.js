@@ -5,7 +5,7 @@ let date = new Date();
 
 // Api Url & Personal API key to reterive weather data from API
 let baseUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=';
-let apiKey = ',&appid=b4d3d3fef0bb2d3296ed61ce09a198d9&units=metric';
+const apiKey = ',&appid=b4d3d3fef0bb2d3296ed61ce09a198d9&units=metric';
 
 // writes an error message to the console. for testing purposes
 const catchError = (error) => {
@@ -37,15 +37,14 @@ const generalteData = () => {
         temp: temp,
         description,
         feelings,
-      };
-
-      // add data to server
-      postData('/addData', info);
-
-      updateUI();
+       };
+      return info
+  
     }
   });
 };
+  .then(async function (info) { await postData(‘/addData’, info) })
+      .then(updateUI)
 
 // Event listener to add function generalData () to existing HTML DOM element
 document.getElementById('generate').addEventListener('click', generalteData);
